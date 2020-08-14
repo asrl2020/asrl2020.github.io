@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GIFOS - Sofia Rodriguez</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="style_main_page" href="./styles/main_page.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+
+            <!--Inicia sección del nav bar, menu superior, logo y agregar GIFs-->
+            <nav id="menu_box" class="menu_box_class">
+
+                <a href="main_page.html" id="logo" class="texto">
+
+                        <!--Logo insertado como SVG para mantener fuente de página-->
+                        <svg width="63px" height="60px" viewBox="0 0 63 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>logo-desktop</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+                                <polygon id="path-1" points="0.494619458 0.526112695 58.2715334 0.526112695 58.2715334 24.1695652 0.494619458 24.1695652"></polygon>
+                            </defs>
+                            <g id="GIFOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="00-UI-Kit" transform="translate(-156.000000, -2463.000000)">
+                                    <g id="logo-desktop" transform="translate(156.000000, 2463.000000)">
+                                        <g id="Group-5">
+                                            <polygon id="Fill-1" fill="#5ED7C6" points="0 -0.0002 0 59.1084314 59.1086314 59.1084314 59.1086314 46.4422961 54.8865863 46.4422961 54.8865863 54.8863863 4.2220451 54.8863863 4.2220451 4.2218451 42.220451 4.2218451 42.220451 16.8879804 54.8865863 16.8879804 54.8865863 25.332915 59.1086314 25.332915 59.1086314 12.6659353 46.4424961 -0.0002"></polygon>
+                                            <g id="Group-4" transform="translate(9.000000, 20.000000)">
+                                                <mask id="mask-2" fill="white">
+                                                    <use xlink:href="#path-1"></use>
+                                                </mask>
+                                                <g id="Clip-3"></g>
+                                                <text class="gifos_logo" id="GIFOS_2" mask="url(#mask-2)" font-size="16" font-weight="700">
+                                                    <tspan x="3" y="21">GIFOS</tspan>
+                                                </text>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+
+                <!--Barra de menu-->
+                <button id="boton_menu_hamburguesa"><img id="menu_hamburguesa_img" src="images/burger.svg"></button>
+                <div id="menu_componentes"> 
+                    <a id="modo_nocturno" class="texto modo_nocturno_menu"></a><hr class="menu_lines">
+                    <a href="favorites.html" class="texto favoritos_menu"></a><hr class="menu_lines">
+                    <a href="mis_gifos.html" id="mis_gifos_menu" class="texto"></a><hr class="menu_lines">
+                    <button id="agregar_gif"></button><a href="agregar_gif.html"></a></button>
+                </div>
+                
+            </nav>
+        </header>
+
+        <main>
+            <!--Sección principal de la página. Imagen y barra de busqueda-->
+            <div id="principal" class="cuerpo">
+                <h1 id="titulo_principal" class="texto">Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
+                <div id="imagen_principal" class="imagen"><img src="images/imagen_principal.svg"></div>
+                <div id="barra_busqueda_abierta">
+                    <div id="input_btn">
+                        <button id="btn_lupa"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" id="lupa"></button>
+                        <input type="text" id="input_busqueda" name="input_busqueda" placeholder="Busca GIFOS y más">
+                        <button id="btn_close"><img id="close" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Botón close"></button>
+                    </div>
+                    <div id="sugerencias_container">
+                        <p id="sugerencia1" class="texto"></p>
+                        <p id="sugerencia2"class="texto"></p>
+                        <p id="sugerencia3"class="texto"></p>
+                        <p id="sugerencia4"class="texto"></p>
+                    </div>
+                </div>
+        
+                <div id="trending_principal">
+                    <p id="titulo_trending" class="texto">Trending:</p>
+                    <p id="trending_topics" class="texto">
+                        <span id="trending1">.</span>
+                        <span id="trending2">.</span>
+                        <span id="trending3">.</span>
+                        <span id="trending4">.</span>
+                        <span id="trending5">.</span>
+                    </p>
+                </div>
+            </div>
+            <div id="search_section_container">
+            <div id="search_section">
+                <h1 id="search_title" class="texto">placeholder</h1>
+                <div id="results_container">
+                    <div id="search_grid"></div>
+                    <div id="hovers_grid"></div>
+                </div>
+                <button id="btn_search">VER MÁS</button>
+            </div></div>
+
+            <!--Sección con los gifs trending de ese momento-->
+            <div id="trending_sectionII">
+                <h1 id="trending_title" class="texto">Trending GIFOS</h1>
+                <p id="trending_text" class="texto">Mira los últimos GIFOS de nuestra comunidad.</p>
+                <button id="prev_btn"></button>
+                <button id="fwrd_btn"></button>
+                <div id="trending_gifs_container"><div id="trending_gifs"></div></div>
+                <div id="trending_hover_container"><div id="trending_hover"></div></div>
+                
+            </div>
+        </main>
+
+        <!--Footer, incluye redes sociales y copyright-->
+        <footer>
+            <div id="redes_box" class="redes">
+                <p class="texto">Compartir en:</p>
+                <a class="redes_icon" id="facebook" href="https://www.facebook.com/" target="blank"></a>
+                <a class="redes_icon" id="twitter" href="https://twitter.com/home" target="blank"></a>
+                <a class="redes_icon" id="instagram" href="https://www.instagram.com/" target="blank"></a>
+            </div>
+
+            <p id="copyright" class="texto">&#169; GIFOS 2020 All Rights Reserved.</p>
+        </footer>
+        <script type="module" src="./scripts/mainpage.js" defer></script>
+    </body>
+</html>
